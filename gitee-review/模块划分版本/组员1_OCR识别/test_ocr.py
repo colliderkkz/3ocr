@@ -1,0 +1,56 @@
+from __future__ import annotations
+
+import unittest
+from pathlib import Path
+
+from menu_parser import parse_menu
+from ocr_engine import recognize_image
+
+
+BASE_DIR = Path(__file__).resolve().parent
+SAMPLE = BASE_DIR / "sample" / "sample-menu.png"
+
+
+class MenuParserTest(unittest.TestCase):
+    def test_name_and_separate_price_are_merged(self) -> None:
+        records = parse_menu(
+            [
+                {
+                    "text": "热菜",
+                    "confidence": 0.99,
+                    "bbox": [[80, 80], [180, 80], [180, 120], [80, 120]],
+                },
+                {
+                    "text": "宫保鸡丁",
+                    "confidence": 0.98,
+                    "bbox": [[80, 160], [240, 160], [240, 200], [80, 200]],
+                },
+                {
+                    "text": "38 元",
+                    "confidence": 0.97,
+                    "bbox": [[760, 160], [860, 160], [860, 200], [760, 200]],
+                },
+            ]
+        )
+        dishes = [item for item in records if item["record_type"] == "dish"]
+        self.assertEqual(dishes[0]["dish_name"], "宫保鸡丁")
+        self.assertEqual(dishes[0]["price"], "38")
+        self.assertEqual(dishes[0]["category"], "热菜")
+
+
+class SampleOcrTest(unittest.TestCase):
+    def test_sample_image_has_structured_dishes(self) -> None:
+        result = recognize_image(SAMPLE, engine="auto", preprocess=True)
+        records = parse_menu(result["items"])
+        dishes = {
+            (item["dish_name"], item["price"])
+            for item in records
+            if item["record_type"] == "dish"
+        }
+        self.assertIn(("宫保鸡丁", "38"), dishes)
+        self.assertIn(("麻婆豆腐", "28"), dishes)
+        self.assertIn(("水煮鱼", "68"), dishes)
+
+
+if __name__ == "__main__":
+    unittest.main()

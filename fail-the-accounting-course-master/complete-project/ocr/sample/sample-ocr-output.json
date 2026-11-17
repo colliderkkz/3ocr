@@ -1,0 +1,448 @@
+{
+  "image": "sample\\sample-menu.png",
+  "engine": "Windows.Media.Ocr",
+  "language": "zh-Hans-CN",
+  "raw_text": "小 满 食 堂\n四 时 风 物 · 川 味 家 常\n招 牌 热 菜\n宫 保 鸡 丁\n麻 婆 豆 腐\n水 煮 鱼\n红 烧 肉\n菜 单 价 格 均 为 人 民 币 · OCR 测 试 样 例\n38 元\n28 元\n68 元\n58 元",
+  "items": [
+    {
+      "text": "小 满 食 堂",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          500,
+          163
+        ],
+        [
+          901,
+          163
+        ],
+        [
+          901,
+          262
+        ],
+        [
+          500,
+          262
+        ]
+      ]
+    },
+    {
+      "text": "四 时 风 物 · 川 味 家 常",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          517,
+          274
+        ],
+        [
+          883,
+          274
+        ],
+        [
+          883,
+          317
+        ],
+        [
+          517,
+          317
+        ]
+      ]
+    },
+    {
+      "text": "招 牌 热 菜",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          147,
+          448
+        ],
+        [
+          370,
+          448
+        ],
+        [
+          370,
+          502
+        ],
+        [
+          147,
+          502
+        ]
+      ]
+    },
+    {
+      "text": "宫 保 鸡 丁",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          149,
+          564
+        ],
+        [
+          336,
+          564
+        ],
+        [
+          336,
+          611
+        ],
+        [
+          149,
+          611
+        ]
+      ]
+    },
+    {
+      "text": "麻 婆 豆 腐",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          148,
+          710
+        ],
+        [
+          336,
+          710
+        ],
+        [
+          336,
+          756
+        ],
+        [
+          148,
+          756
+        ]
+      ]
+    },
+    {
+      "text": "水 煮 鱼",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          148,
+          855
+        ],
+        [
+          289,
+          855
+        ],
+        [
+          289,
+          901
+        ],
+        [
+          148,
+          901
+        ]
+      ]
+    },
+    {
+      "text": "红 烧 肉",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          148,
+          999
+        ],
+        [
+          286,
+          999
+        ],
+        [
+          286,
+          1047
+        ],
+        [
+          148,
+          1047
+        ]
+      ]
+    },
+    {
+      "text": "菜 单 价 格 均 为 人 民 币 · OCR 测 试 样 例",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          359,
+          1703
+        ],
+        [
+          1040,
+          1703
+        ],
+        [
+          1040,
+          1746
+        ],
+        [
+          359,
+          1746
+        ]
+      ]
+    },
+    {
+      "text": "38 元",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          1114,
+          568
+        ],
+        [
+          1252,
+          568
+        ],
+        [
+          1252,
+          621
+        ],
+        [
+          1114,
+          621
+        ]
+      ]
+    },
+    {
+      "text": "28 元",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          1113,
+          714
+        ],
+        [
+          1252,
+          714
+        ],
+        [
+          1252,
+          766
+        ],
+        [
+          1113,
+          766
+        ]
+      ]
+    },
+    {
+      "text": "68 元",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          1113,
+          859
+        ],
+        [
+          1252,
+          859
+        ],
+        [
+          1252,
+          912
+        ],
+        [
+          1113,
+          912
+        ]
+      ]
+    },
+    {
+      "text": "58 元",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          1115,
+          1005
+        ],
+        [
+          1252,
+          1005
+        ],
+        [
+          1252,
+          1057
+        ],
+        [
+          1115,
+          1057
+        ]
+      ]
+    }
+  ],
+  "structured_text": [
+    "宫保鸡丁\t38\t招牌热菜",
+    "麻婆豆腐\t28\t招牌热菜",
+    "水煮鱼\t68\t招牌热菜",
+    "红烧肉\t58\t招牌热菜"
+  ],
+  "records": [
+    {
+      "dish_name": "小满食堂",
+      "price": "",
+      "category": "",
+      "record_type": "invalid",
+      "match_confidence": 1.0,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          500.0,
+          163.0
+        ],
+        [
+          901.0,
+          163.0
+        ],
+        [
+          901.0,
+          262.0
+        ],
+        [
+          500.0,
+          262.0
+        ]
+      ],
+      "sort_order": 0,
+      "anomaly": "none"
+    },
+    {
+      "dish_name": "四时风物 · 川味家常",
+      "price": "",
+      "category": "",
+      "record_type": "invalid",
+      "match_confidence": 1.0,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          517.0,
+          274.0
+        ],
+        [
+          883.0,
+          274.0
+        ],
+        [
+          883.0,
+          317.0
+        ],
+        [
+          517.0,
+          317.0
+        ]
+      ],
+      "sort_order": 1,
+      "anomaly": "none"
+    },
+    {
+      "dish_name": "招牌热菜",
+      "price": "",
+      "category": "招牌热菜",
+      "record_type": "category_header",
+      "match_confidence": 1.0,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          147.0,
+          448.0
+        ],
+        [
+          370.0,
+          448.0
+        ],
+        [
+          370.0,
+          502.0
+        ],
+        [
+          147.0,
+          502.0
+        ]
+      ],
+      "sort_order": 2,
+      "anomaly": "none"
+    },
+    {
+      "dish_name": "宫保鸡丁",
+      "price": "38",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.8,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          149.0,
+          564.0
+        ],
+        [
+          1252.0,
+          568.0
+        ]
+      ],
+      "sort_order": 3,
+      "anomaly": "none",
+      "verify_status": "pending"
+    },
+    {
+      "dish_name": "麻婆豆腐",
+      "price": "28",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.8,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          148.0,
+          710.0
+        ],
+        [
+          1252.0,
+          714.0
+        ]
+      ],
+      "sort_order": 5,
+      "anomaly": "none",
+      "verify_status": "pending"
+    },
+    {
+      "dish_name": "水煮鱼",
+      "price": "68",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.8,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          148.0,
+          855.0
+        ],
+        [
+          1252.0,
+          859.0
+        ]
+      ],
+      "sort_order": 7,
+      "anomaly": "none",
+      "verify_status": "pending"
+    },
+    {
+      "dish_name": "红烧肉",
+      "price": "58",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.8,
+      "ocr_confidence": 1.0,
+      "bbox": [
+        [
+          148.0,
+          999.0
+        ],
+        [
+          1252.0,
+          1005.0
+        ]
+      ],
+      "sort_order": 9,
+      "anomaly": "none",
+      "verify_status": "pending"
+    }
+  ]
+}

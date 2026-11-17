@@ -1,0 +1,34 @@
+{
+  "store_name": "接口测试门店",
+  "image_name": "external-ocr-sample.jpg",
+  "engine": "ExternalOCR",
+  "records": [
+    {
+      "dish_name": "招牌热菜",
+      "price": "",
+      "category": "",
+      "record_type": "category_header",
+      "match_confidence": 1.0,
+      "ocr_confidence": 0.99,
+      "anomaly": "none"
+    },
+    {
+      "dish_name": "宫保鸡丁",
+      "price": "38",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.96,
+      "ocr_confidence": 0.97,
+      "anomaly": "none"
+    },
+    {
+      "dish_name": "麻婆豆腐",
+      "price": "28",
+      "category": "招牌热菜",
+      "record_type": "dish",
+      "match_confidence": 0.94,
+      "ocr_confidence": 0.95,
+      "anomaly": "none"
+    }
+  ]
+}

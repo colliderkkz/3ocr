@@ -1,0 +1,49 @@
+test_dish_pagination_and_filtered_total (test_backend.ApiTest.test_dish_pagination_and_filtered_total) ... ok
+test_export_iterator_has_stable_snapshot_during_insert (test_backend.ApiTest.test_export_iterator_has_stable_snapshot_during_insert) ... ok
+test_export_preserves_special_characters_as_valid_spreadsheet_xml (test_backend.ApiTest.test_export_preserves_special_characters_as_valid_spreadsheet_xml) ... ok
+test_export_xlsx (test_backend.ApiTest.test_export_xlsx) ... ok
+test_external_ocr_storage_and_crud (test_backend.ApiTest.test_external_ocr_storage_and_crud) ... ok
+test_health_and_frontend (test_backend.ApiTest.test_health_and_frontend) ... ok
+test_invalid_pagination_parameters_return_400 (test_backend.ApiTest.test_invalid_pagination_parameters_return_400) ... ok
+test_invalid_request_framing_is_rejected (test_backend.ApiTest.test_invalid_request_framing_is_rejected) ... ok
+test_ocr_records_roll_back_if_image_store_does_not_match (test_backend.ApiTest.test_ocr_records_roll_back_if_image_store_does_not_match) ... ok
+test_name_and_separate_price_are_merged (test_ocr.MenuParserTest.test_name_and_separate_price_are_merged) ... ok
+test_preprocess_failure_removes_temporary_directory (test_ocr.SampleOcrTest.test_preprocess_failure_removes_temporary_directory) ... ok
+test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes) ... ok
+test_windows_timeout_is_explained (test_ocr.SampleOcrTest.test_windows_timeout_is_explained) ... ok
+test_invalid_image_is_rejected (test_integration.ImageIntegrationTest.test_invalid_image_is_rejected) ... ok
+test_ocr_failure_is_reported (test_integration.ImageIntegrationTest.test_ocr_failure_is_reported) ... ok
+test_unknown_engine_does_not_create_store_or_upload (test_integration.ImageIntegrationTest.test_unknown_engine_does_not_create_store_or_upload) ... ok
+test_upload_image_and_query_saved_dishes (test_integration.ImageIntegrationTest.test_upload_image_and_query_saved_dishes) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 10.678s
+
+OK
+[17/Nov/2026 01:27:19] 127.0.0.1 "GET /api/dishes?limit=2000&category=%E6%B5%8B%E8%AF%95 HTTP/1.1" 200 -
+[17/Nov/2026 01:27:19] 127.0.0.1 "GET /api/dishes?limit=2000&offset=2000&category=%E6%B5%8B%E8%AF%95 HTTP/1.1" 200 -
+[17/Nov/2026 01:27:19] 127.0.0.1 "GET /api/dishes/export?category=%E6%B5%8B%E8%AF%95 HTTP/1.1" 200 -
+[17/Nov/2026 01:27:20] 127.0.0.1 "GET /api/dishes/export HTTP/1.1" 200 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "GET /api/dishes/export HTTP/1.1" 200 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "GET /api/dishes?q=%E5%AE%AB%E4%BF%9D HTTP/1.1" 200 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "PUT /api/dishes/2 HTTP/1.1" 200 -
+[17/Nov/2026 01:27:21] 127.0.0.1 "DELETE /api/dishes/2 HTTP/1.1" 200 -
+[17/Nov/2026 01:27:22] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[17/Nov/2026 01:27:22] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "GET /api/dishes?limit=0 HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "GET /api/dishes?limit=2001 HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "GET /api/dishes?limit=abc HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "GET /api/dishes?offset=-1 HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "GET /api/dishes?offset=9223372036854775808 HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "POST /api/stores HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "POST /api/stores HTTP/1.1" 400 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "POST /api/stores HTTP/1.1" 413 -
+[17/Nov/2026 01:27:23] 127.0.0.1 "POST /api/stores HTTP/1.1" 400 -
+[17/Nov/2026 01:27:26] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 415 -
+[17/Nov/2026 01:27:26] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 422 -
+[17/Nov/2026 01:27:27] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 400 -
+[17/Nov/2026 01:27:29] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 201 -
+[17/Nov/2026 01:27:29] 127.0.0.1 "GET /api/images/a92b83a1-3528-4c2b-9828-a82e5c26b3e5/file HTTP/1.1" 200 -
+[17/Nov/2026 01:27:29] 127.0.0.1 "GET /api/dishes HTTP/1.1" 200 -

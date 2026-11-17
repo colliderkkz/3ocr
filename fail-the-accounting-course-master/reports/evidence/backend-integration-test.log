@@ -1,0 +1,19 @@
+test_export_xlsx (test_backend.ApiTest.test_export_xlsx) ... ok
+test_external_ocr_storage_and_crud (test_backend.ApiTest.test_external_ocr_storage_and_crud) ... ok
+test_health_and_frontend (test_backend.ApiTest.test_health_and_frontend) ... ok
+test_upload_image_and_query_saved_dishes (test_integration.ImageIntegrationTest.test_upload_image_and_query_saved_dishes) ... ok
+[16/Nov/2026 23:30:33] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[16/Nov/2026 23:30:33] 127.0.0.1 "GET /api/dishes/export HTTP/1.1" 200 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "GET /api/dishes?q=%E5%AE%AB%E4%BF%9D HTTP/1.1" 200 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "PUT /api/dishes/2 HTTP/1.1" 200 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "DELETE /api/dishes/2 HTTP/1.1" 200 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[16/Nov/2026 23:30:34] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[16/Nov/2026 23:30:36] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 201 -
+[16/Nov/2026 23:30:36] 127.0.0.1 "GET /api/dishes HTTP/1.1" 200 -
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.973s
+
+OK

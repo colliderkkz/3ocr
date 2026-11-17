@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>食单识别 · 菜单工作台</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brand-icon" aria-hidden="true">食</span><div><strong>食单识别</strong><small>MENU WORKSPACE</small></div></div><span id="connection" class="connection" role="status">正在连接…</span></header>
+<main class="shell">
+<section class="intro"><div><p class="eyebrow">MENU OCR WORKSPACE</p><h1>菜单识别工作台</h1><p>上传菜单，核对识别结果，并保存到菜品库。</p></div><a class="button secondary" href="/api/dishes/export" id="export">导出全部菜品</a></section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<div class="layout">
+<section class="card upload-card" aria-labelledby="upload-title"><div class="section-heading"><div><p class="eyebrow">01 / UPLOAD</p><h2 id="upload-title">上传菜单</h2></div><span class="tag">JPG / PNG</span></div>
+<form id="upload-form"><label for="store">门店名称</label><input id="store" name="store" list="stores" placeholder="输入门店名称" maxlength="100" required><datalist id="stores"></datalist>
+<label for="image">菜单图片</label><input id="image" type="file" name="image" accept="image/jpeg,image/png" required><p class="hint">选择清晰的 JPG 或 PNG 图片，单次最多 30 MB。</p><button id="upload-button" class="button primary" type="submit">开始识别</button></form>
+<div class="tip"><strong>已有 OCR 文本？</strong><p>可粘贴其他工具识别的菜单文本，由后端解析并保存到当前门店。</p><label for="ocr-text">菜单文本</label><textarea id="ocr-text" rows="4" placeholder="每行一项，例如：宫保鸡丁 38 元"></textarea><button id="parse-text" class="button secondary" type="button">解析并保存文本</button></div></section>
+<section class="card records-card" aria-labelledby="records-title"><div class="section-heading"><div><p class="eyebrow">02 / REVIEW</p><h2 id="records-title">识别结果</h2><p class="subtext">数据来自后端菜品库</p></div><div class="actions"><button id="add-dish" class="button primary" type="button">新增菜品</button><button id="reload" class="button secondary" type="button">刷新数据</button></div></div>
+<div class="filters"><label for="store-filter">筛选门店</label><select id="store-filter"><option value="">全部门店</option></select><label for="search">搜索菜品</label><input id="search" placeholder="输入菜名"></div>
+<div class="table-wrap"><table><thead><tr><th>菜品名称</th><th>价格</th><th>分类</th><th>门店</th><th>校验</th><th>操作</th></tr></thead><tbody id="records"><tr><td colspan="6" class="empty">正在加载…</td></tr></tbody></table></div><p id="count" class="count"></p></section>
+</div>
+<section id="preview-section" class="card preview-card" hidden><div class="section-heading"><div><p class="eyebrow">03 / IMAGE</p><h2>菜单原图</h2></div><div class="actions"><button id="preview-zoom-out" class="button secondary" type="button" aria-label="缩小原图">−</button><button id="preview-zoom-in" class="button secondary" type="button" aria-label="放大原图">＋</button><button id="preview-rotate" class="button secondary" type="button">旋转</button><button id="close-preview" class="button secondary" type="button">收起</button></div></div><div class="preview-frame"><img id="preview" alt="已上传的菜单原图"></div></section>
+</main>
+<dialog id="edit-dialog"><form id="edit-form"><div class="section-heading"><div><p class="eyebrow">EDIT RECORD</p><h2 id="edit-title">校验菜品</h2></div><button type="button" id="close-edit" class="icon-button" aria-label="关闭">×</button></div><input id="edit-id" type="hidden"><div id="edit-store-wrap" hidden><label for="edit-store">门店</label><select id="edit-store"></select></div><label for="edit-name">菜品名称</label><input id="edit-name" required maxlength="200"><label for="edit-price">价格</label><input id="edit-price" inputmode="decimal" maxlength="40"><label for="edit-category">分类</label><input id="edit-category" maxlength="100"><p id="edit-error" class="error" role="alert" hidden></p><div class="dialog-actions"><button type="button" id="cancel-edit" class="button secondary">取消</button><button type="submit" id="save-edit" class="button primary">保存并标记已校验</button></div></form></dialog>
+<script src="/app.js" defer></script></body></html>

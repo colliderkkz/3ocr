@@ -1,0 +1,21 @@
+test_name_and_separate_price_are_merged (test_ocr.MenuParserTest.test_name_and_separate_price_are_merged) ... ok
+test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes) ... ERROR
+
+======================================================================
+ERROR: test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "M:\homework\3ocr_demo\fail-the-accounting-course-master\模块划分版本\组员1_OCR识别\test_ocr.py", line 43, in test_sample_image_has_structured_dishes
+    result = recognize_image(SAMPLE, engine="auto", preprocess=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "M:\homework\3ocr_demo\fail-the-accounting-course-master\模块划分版本\组员1_OCR识别\ocr_engine.py", line 205, in recognize_image
+    return _windows_ocr_recognize(work_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "M:\homework\3ocr_demo\fail-the-accounting-course-master\模块划分版本\组员1_OCR识别\ocr_engine.py", line 118, in _windows_ocr_recognize
+    raise RuntimeError("Windows OCR 脚本缺失")
+RuntimeError: Windows OCR 脚本缺失
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.187s
+
+FAILED (errors=1)

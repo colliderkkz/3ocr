@@ -1,0 +1,26 @@
+test_export_xlsx (test_backend.ApiTest.test_export_xlsx) ... ok
+test_external_ocr_storage_and_crud (test_backend.ApiTest.test_external_ocr_storage_and_crud) ... ok
+test_health_and_frontend (test_backend.ApiTest.test_health_and_frontend) ... ok
+test_name_and_separate_price_are_merged (test_ocr.MenuParserTest.test_name_and_separate_price_are_merged) ... ok
+test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes) ... ok
+test_upload_image_and_query_saved_dishes (test_integration.ImageIntegrationTest.test_upload_image_and_query_saved_dishes) ... ok
+test_invalid_image_is_rejected (test_integration.ImageIntegrationTest.test_invalid_image_is_rejected) ... ok
+test_ocr_failure_is_reported (test_integration.ImageIntegrationTest.test_ocr_failure_is_reported) ... ok
+
+----------------------------------------------------------------------
+[17/Nov/2026 00:52:15] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[17/Nov/2026 00:52:15] 127.0.0.1 "GET /api/dishes/export HTTP/1.1" 200 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "GET /api/dishes?q=%E5%AE%AB%E4%BF%9D HTTP/1.1" 200 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "PUT /api/dishes/2 HTTP/1.1" 200 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "DELETE /api/dishes/2 HTTP/1.1" 200 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[17/Nov/2026 00:52:16] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[17/Nov/2026 00:52:20] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 201 -
+[17/Nov/2026 00:52:20] 127.0.0.1 "GET /api/images/887bd191-311d-464a-ad88-754a356f25fb/file HTTP/1.1" 200 -
+[17/Nov/2026 00:52:20] 127.0.0.1 "GET /api/dishes HTTP/1.1" 200 -
+[17/Nov/2026 00:52:20] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 415 -
+[17/Nov/2026 00:52:21] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 422 -
+Ran 8 tests in 6.724s
+
+OK

@@ -1,0 +1,7 @@
+test_name_and_separate_price_are_merged (test_ocr.MenuParserTest.test_name_and_separate_price_are_merged) ... ok
+test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.633s
+
+OK

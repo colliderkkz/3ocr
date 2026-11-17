@@ -1,0 +1,3 @@
+2026-11-17，临时 SQLite 数据库：写入 2001 条，修复前 list_dishes(limit=2000) 返回 2000 条。基线脚本退出时 Windows 临时数据库仍被占用，清理时报 PermissionError；不影响已输出的计数。
+复测：test_dish_pagination_and_filtered_total 验证两页合计 2001 条、筛选总数、无重复，并验证 XLSX 包含全部 2001 条。
+浏览器：tests/browser_pagination.py 使用真实后端及 SQLite，验证 2001 条加载、搜索最早记录和刷新。

@@ -1,0 +1,13 @@
+通过：三个导航可访问；上传样例后显示后端 OCR 4 条菜品，宫保鸡丁存在。
+JavaScript 页面异常： []
+Starting server 1/1: python -u start.py --port 18765
+Waiting for server on port 18765...
+Server ready on port 18765
+
+All 1 server(s) ready
+Running: C:\Users\89813\AppData\Local\Temp\czh-browser-test-env\Scripts\python.exe C:\Users\89813\AppData\Local\Temp\czh-browser-check.py
+
+
+Stopping 1 server(s)...
+Server 1 stopped
+All servers stopped

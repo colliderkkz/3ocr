@@ -1,0 +1,58 @@
+隔离运行时间（北京时间）: 2026-11-16T23:59:56.838924+08:00
+
+[OCR] exit=0
+命令: ['C:\\Users\\89813\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-m', 'unittest', '-v', 'test_ocr']
+目录: 模块划分版本\组员1_OCR识别
+test_name_and_separate_price_are_merged (test_ocr.MenuParserTest.test_name_and_separate_price_are_merged) ... ok
+test_sample_image_has_structured_dishes (test_ocr.SampleOcrTest.test_sample_image_has_structured_dishes) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.677s
+
+OK
+
+
+[API和集成] exit=0
+命令: ['C:\\Users\\89813\\AppData\\Local\\Programs\\Python\\Python312\\python.exe', '-m', 'unittest', '-v', 'test_backend', 'test_integration.ImageIntegrationTest.test_upload_image_and_query_saved_dishes']
+目录: 模块划分版本\组员2_后端接口
+[16/Nov/2026 23:59:59] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[16/Nov/2026 23:59:59] 127.0.0.1 "GET /api/dishes/export HTTP/1.1" 200 -
+[16/Nov/2026 23:59:59] 127.0.0.1 "POST /api/ocr/results HTTP/1.1" 201 -
+[16/Nov/2026 23:59:59] 127.0.0.1 "GET /api/dishes?q=%E5%AE%AB%E4%BF%9D HTTP/1.1" 200 -
+[16/Nov/2026 23:59:59] 127.0.0.1 "PUT /api/dishes/2 HTTP/1.1" 200 -
+[16/Nov/2026 23:59:59] 127.0.0.1 "DELETE /api/dishes/2 HTTP/1.1" 200 -
+[17/Nov/2026 00:00:00] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[17/Nov/2026 00:00:00] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[17/Nov/2026 00:00:02] 127.0.0.1 "POST /api/ocr/recognize HTTP/1.1" 201 -
+[17/Nov/2026 00:00:02] 127.0.0.1 "GET /api/dishes HTTP/1.1" 200 -
+test_export_xlsx (test_backend.ApiTest.test_export_xlsx) ... ok
+test_external_ocr_storage_and_crud (test_backend.ApiTest.test_external_ocr_storage_and_crud) ... ok
+test_health_and_frontend (test_backend.ApiTest.test_health_and_frontend) ... ok
+test_upload_image_and_query_saved_dishes (test_integration.ImageIntegrationTest.test_upload_image_and_query_saved_dishes) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.083s
+
+OK
+
+
+[启动] python start.py --port 63198；GET /api/health 与 / 返回 200，页面包含食单识别。
+{
+  "status": "ok",
+  "service": "menu-ocr-demo",
+  "api_version": "1.0",
+  "database": "C:\\Users\\89813\\AppData\\Local\\Temp\\complete-project-isolation-tj8c6xnh\\complete-project\\模块划分版本\\组员2_后端接口\\data\\menu.db",
+  "modules": {
+    "ocr_algorithm": true,
+    "frontend": true
+  },
+  "ocr_engines": {
+    "rapidocr": false,
+    "windows_ocr": true
+  }
+}
+
+服务输出:
+菜单 OCR Demo 已启动：http://127.0.0.1:63198/
+[17/Nov/2026 00:00:03] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[17/Nov/2026 00:00:03] 127.0.0.1 "GET / HTTP/1.1" 200 -
